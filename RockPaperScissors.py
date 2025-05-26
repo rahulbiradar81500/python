@@ -6,30 +6,20 @@ losses = 0
 ties = 0
 print('ROCK, PAPER, SCISSORS')
 while True:
-    print(f'{wins} Wins, {losses} Losses, {ties} Ties')
+    print(f'\n{wins} Wins, {losses} Losses, {ties} Ties')
     while True:
         print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')
         player_move = input().lower()
         if player_move in ['r', 'p', 's', 'q']:
             break
         print("Invalid input. Please choose r, p, s, or q.")
-    if player_move == 'q':
+   if player_move == 'q':
         print('Thanks for playing!')
         sys.exit()
-    if player_move == 'r':
-        print('ROCK versus...')
-    elif player_move == 'p':
-        print('PAPER versus...')
-    elif player_move == 's':
-        print('SCISSORS versus...')
-    moves = ['r', 'p', 's']
-    computer_move = random.choice(moves)
-    if computer_move == 'r':
-        print('ROCK')
-    elif computer_move == 'p':
-        print('PAPER')
-    elif computer_move == 's':
-        print('SCISSORS')  
+    moves_dict = {'r': 'ROCK', 'p': 'PAPER', 's': 'SCISSORS'}
+    print(f"{moves_dict[player_move]} versus...")
+   computer_move = random.choice(['r', 'p', 's'])
+    print(moves_dict[computer_move])
     if player_move == computer_move:
         print('It is a tie!')
         ties += 1
