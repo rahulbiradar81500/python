@@ -1,5 +1,6 @@
 import random
 import sys
+print("name-:rahul biradar\nUSN-:1AY24AI087\nsec-:o")
 wins = 0
 losses = 0
 ties = 0
