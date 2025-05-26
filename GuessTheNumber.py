@@ -1,3 +1,4 @@
+print("name-:rahul biradar\n USN-:1AY24AI087\n sec-:o")
 import random
 number = random.randint(1, 20)
 print("I am thinking of a number between 1 and 20.")
